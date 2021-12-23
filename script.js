@@ -2,7 +2,7 @@ const text = document.querySelector(".text");
 const secretDiv = document.querySelector(".secret-div");
 const mainDiv = document.querySelector("#maindiv");
 const keys = [];
-const secretCode = ["h", "a", "c", "k"];
+const secretCode = ["k", "g", "b"];
 
 const confettiSettings = { target: "my-canvas", size: 1, max: 150 };
 const confetti = new ConfettiGenerator(confettiSettings);
