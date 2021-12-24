@@ -118,6 +118,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         );
       };
     };
+    console.log(imageInput.files[0]);
     reader.readAsDataURL(imageInput.files[0]);
   });
 });
