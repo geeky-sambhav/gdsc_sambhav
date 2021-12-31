@@ -6,21 +6,8 @@
     <title>Meme Genie</title>
     <link rel="stylesheet" href="style.css" />
 
-    <script src="index.min.js">
-		var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
+    <script src="index.min.js"></script>
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
-	</script>
-	
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -29,22 +16,24 @@ function myFunction() {
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="background" class="text-white">
     <canvas id="my-canvas"></canvas>
-   
+
     <div id="maindiv" class="mx-auto" style="width: 600px">
-		<div id="heading">
-			<h1>Welcome to Meme-Genie 🧞</h1>
-		</div>
-			
-     
-      <div id="box" style="align-items: center;">
+      <div id="heading">
+        <h1>Welcome to Meme-Genie 🧞</h1>
+      </div>
+
+      <div id="box" style="align-items: center">
         <div class="p-2">
           <textarea id="top-text"></textarea>
-		  <br />
+          <br />
           Text size:
           <input
             type="range"
@@ -57,7 +46,7 @@ function myFunction() {
         </div>
         <div class="p-2">
           <textarea id="bottom-text"></textarea>
-		  <br />
+          <br />
           Text size:
           <input
             type="range"
