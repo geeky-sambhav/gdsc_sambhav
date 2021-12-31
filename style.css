@@ -1,15 +1,25 @@
-body{
-	margin: 10px;
-	background-color: lightblue;
-  
-  
-  }
-h1 {
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
+body {
+  margin: 10px;
+  background-color: lightblue;
 }
-#maindiv{
-	padding:10px;
+h1 {
+  /* font-family: "Itim", cursive !important; */
+  font-size: 2em !important;
+}
+#maindiv {
+  padding: 10px;
+  background-color: black;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow:10px 5px 10px rgb(47, 18, 75);
+  border-radius: 20px;
+/* 
+  position: fixed;
+  bottom: 0; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* color: #f1f1f1; */
+  /* width: 100%; */
+  /* padding: 20px; */
 }
 
 p {
@@ -17,25 +27,158 @@ p {
 }
 
 #meme-canvas {
-    width: 300px;
+  width: 300px;
 }
 .text {
-	text-align: center;
-	font-size: 42px;
+  text-align: center;
+  /* font-size: 42px; */
 }
 
 .secret-div {
-	text-align: center;
-	padding-top: 10px;
-	display: none;
+  text-align: center;
+  padding-top: 10px;
+  display: none;
 }
 
 #my-canvas {
-	position: absolute;
+  position: absolute;
+  /* background-image: url('C:\Users\chahat\Downloads\bg.jpg'); */
 }
-#toggle:hover{
-	background-color: rgb(36, 110, 21);
-	color:black;
-	transition:all 2s;
-	cursor: pointer;
+
+#toggle:hover {
+  background-color: rgb(36, 110, 21);
+  color: black;
+  transition: all 2s;
+  cursor: pointer;
+}
+
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  background: rgb(97, 105, 109);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  color: rgb(228, 225, 225);
+  font-family: 'Lora', serif;
+  font-size: 3rem !important;
+  /* font-size: 20rem; */
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+#top-text{
+  height: 35px;
+  width:250px;
+}
+#top-text:hover{
+  background-color: blanchedalmond;
+}
+
+#bottom-text{
+  height: 35px;
+  width: 250px;
+}
+#bottom-text:hover{
+  background-color: blanchedalmond;
+}
+
+#image-input{
+  margin-left: 75px;
+  color: aquamarine;
+  /* border-radius: 10px; */
+}
+
+#generate-btn{
+  /* margin-left: 80px; */
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  /* margin: 0; */
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  margin-left: 220px;
+  margin-top: 20px;
+}
+#generate-btn:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+#heading{
+  
+text-align: center;
+}
+#box{
+  text-align: center;
+  margin-top: 40px;
+}
+#background{
+  /* background-image: linear-gradient(purple,white ,purple); */
+  background-image: url('./assets/bg.jpg');
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100%;
+}
+
+<!-- HTML !-->
+<button class="button-72" role="button"></button>
+
+/* CSS */
+.button-72 {
+  
+}
+
+
+@media (min-width: 768px) {
+  .generate-btn {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
 }

@@ -32,7 +32,7 @@ function keysDetector(e) {
 window.addEventListener("keyup", keysDetector);
 
 // MEME CREATION CODE
-function generateMeme(img, topText, bottomText, topTextSize, bottomTextSize) {
+function generateMeme(img, topTextPlaceholder,topText,bottomTextPlaceholder, bottomText, topTextSize, bottomTextSize) {
   const canvas = document.getElementById("meme-canvas");
   const ctx = canvas.getContext("2d");
 
@@ -98,8 +98,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const imageInput = document.getElementById("image-input");
   const generateBtn = document.getElementById("generate-btn");
   // Default/Demo text
-  topTextInput.value = "Top\nValue";
-  bottomTextInput.value = "Bottom\nValue";
+  topTextInput.placeholder = "Top\nValue";
+  bottomTextInput.placeholder = "Bottom\nValue";
+  topTextInput.value = "";
+  bottomTextInput.value = "";
 
   // Generate button click listener
   generateBtn.addEventListener("click", () => {
@@ -111,7 +113,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       img.onload = () => {
         generateMeme(
           img,
+          topTextInput.placeholder,
           topTextInput.value,
+          bottomTextInput.placeholder,
           bottomTextInput.value,
           topTextSizeInput.value,
           bottomTextSizeInput.value
@@ -129,3 +133,13 @@ toggle.addEventListener("click", () => {
   secretDiv.style.display = "none";
   mainDiv.style.display = "block";
 });
+
+// Animations
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
